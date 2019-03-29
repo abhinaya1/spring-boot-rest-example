@@ -1,6 +1,6 @@
 FROM java
 LABEL "MAINTAINER"="abhinaya"
 WORKDIR /app
-RUN yum install apache
+RUN brew install apache
 copy /.target/*.jar/app .
 CMD ["java","-jar","springboot.jar"]
