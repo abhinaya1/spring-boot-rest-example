@@ -1,4 +1,4 @@
-FROM Java
+FROM java
 LABEL "MAINTAINER"="abhinaya"
 WORKDIR /app
 RUN yum install apache
