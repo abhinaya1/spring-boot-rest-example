@@ -1,5 +1,6 @@
 FROM openjdk:8-alpine
-WORKDIR /app
-copy /.target/*.jar /app
+WORKDIR /usr/local/bin/docker
+COPY /gs-spring-boot-16.jar /gs-spring-boot-one.jar
 CMD ["java" , "-jar" , "/gs-spring-boot-one.jar"]
+
 
