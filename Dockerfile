@@ -1,6 +1,5 @@
-FROM java
-LABEL "MAINTAINER"="abhinaya"
-WORKDIR /app
-RUN brew install apache-httpd
-copy /.target/*.jar/app .
-CMD ["java","-jar","springboot.jar"]
+FROM openjdk:8-alpine
+WORKDIR /usr/local/bin/docker
+COPY /gs-spring-boot-16.jar /gs-spring-boot-one.jar
+CMD ["java" , "-jar" , "/gs-spring-boot-one.jar"]
+
